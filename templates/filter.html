@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filtering</title>
+</head>
+<body>
+    <form action="{% url 'index:filter' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Filter</button>
+    </form>
+</body>
+</html>
